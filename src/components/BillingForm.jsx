@@ -21,11 +21,11 @@ export default function BillingForm({
   setPincode,
 }) {
   return (
-    <div className="lg:col-span-2 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
-      <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-1">
+    <div className="lg:col-span-2 bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm w-full min-w-0">
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight mb-1">
         Review your details
       </h1>
-      <h2 className="text-lg font-bold text-slate-500 mb-6">
+      <h2 className="text-base sm:text-lg font-bold text-slate-500 mb-4 sm:mb-6">
         Billing Information
       </h2>
 
@@ -198,16 +198,16 @@ export default function BillingForm({
         </div>
 
         {/* Cancel & Save Buttons */}
-        <div className="flex justify-end gap-3 pt-4 border-t border-slate-100">
+        <div className="flex flex-col-reverse sm:flex-row justify-stretch sm:justify-end gap-3 pt-4 border-t border-slate-100">
           <button
             type="button"
-            className="px-6 py-2.5 bg-white border border-slate-200 rounded-lg text-slate-700 font-bold text-sm hover:bg-slate-50 active:scale-95 transition-all duration-150 cursor-pointer"
+            className="w-full sm:w-auto px-6 py-2.5 bg-white border border-slate-200 rounded-lg text-slate-700 font-bold text-sm hover:bg-slate-50 active:scale-95 transition-all duration-150 cursor-pointer"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-6 py-2.5 bg-[#2563eb] hover:bg-blue-700 text-white font-bold text-sm rounded-lg shadow-sm active:scale-95 transition-all duration-150 cursor-pointer"
+            className="w-full sm:w-auto px-6 py-2.5 bg-[#2563eb] hover:bg-blue-700 text-white font-bold text-sm rounded-lg shadow-sm active:scale-95 transition-all duration-150 cursor-pointer"
           >
             Save Details
           </button>

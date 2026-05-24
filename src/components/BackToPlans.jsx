@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function BackToPlans() {
   return (
-    <div className="p-3 sm:px-5 sm:py-2 flex items-center justify-start cursor-pointer select-none">
+    <div className="px-0 py-2 sm:px-2 sm:py-2 flex items-center justify-start cursor-pointer select-none">
       <button className="flex items-center gap-2 text-slate-600 hover:text-slate-900 font-medium text-sm transition-colors duration-200">
         <svg
           className="w-4 h-4"

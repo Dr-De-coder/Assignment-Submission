@@ -23,13 +23,13 @@ function App() {
   const [pincode, setPincode] = useState('');
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F4F6F8] text-slate-800 selection:bg-blue-500 selection:text-white font-sans">
+    <div className="flex flex-col min-h-screen bg-[#F4F6F8] text-slate-800 selection:bg-blue-500 selection:text-white font-sans overflow-x-hidden">
       
       {/* Header */}
       <Header />
 
       {/* Main page content */}
-      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 overflow-x-hidden">
         <BackToPlans />
 
         <PaymentPage

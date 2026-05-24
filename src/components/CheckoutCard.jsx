@@ -12,7 +12,7 @@ export default function CheckoutCard({
   setCouponCodeInput,
 }) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3 sm:space-y-4 w-full min-w-0">
       <WalletBalance />
 
       <CouponSection
@@ -28,7 +28,7 @@ export default function CheckoutCard({
 
       <button
         type="button"
-        className="w-full py-3.5 bg-[#2563eb] text-white font-bold text-base rounded-xl cursor-pointer text-center"
+        className="w-full py-3 sm:py-3.5 bg-[#2563eb] text-white font-bold text-sm sm:text-base rounded-xl cursor-pointer text-center"
       >
         Proceed to Payment
       </button>

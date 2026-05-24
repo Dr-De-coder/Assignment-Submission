@@ -29,8 +29,8 @@ export default function PaymentPage({
   setCouponCodeInput,
 }) {
   return (
-    <div className="p-4 sm:p-5">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+    <div className="px-0 sm:px-2 py-2 sm:py-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 items-start">
         <BillingForm
           companyName={companyName}
           setCompanyName={setCompanyName}

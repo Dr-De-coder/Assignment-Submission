@@ -11,9 +11,9 @@ export default function OrderSummary({
   setCouponCodeInput,
 }) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6 w-full min-w-0 lg:sticky lg:top-24">
       <div>
-        <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight mb-4 pl-1">
+        <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-3 sm:mb-4">
           Order Summary
         </h2>
         <SelectedPlanCard />
