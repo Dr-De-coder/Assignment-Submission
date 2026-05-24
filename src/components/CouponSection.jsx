@@ -9,22 +9,18 @@ function CouponOption({ code, description, isSelected, onSelect }) {
   return (
     <div
       onClick={() => onSelect(code)}
-      className={`flex items-center justify-between border rounded-xl p-3 cursor-pointer select-none transition-all ${
-        isSelected ? 'border-blue-200 bg-blue-50/20' : 'border-slate-100 hover:bg-slate-50/50'
+      className={`flex items-center justify-between rounded-lg p-3 cursor-pointer select-none transition-all ${
+        isSelected
+          ? 'border-2 border-green-500 bg-white'
+          : 'border border-slate-200 bg-white'
       }`}
     >
       <div>
-        <span className={`text-xs font-extrabold ${isSelected ? 'text-slate-900' : 'text-slate-500'}`}>
-          {code}
-        </span>
-        <p className="text-[10px] text-slate-400 font-semibold mt-0.5">{description}</p>
+        <span className="text-sm font-bold text-slate-900">{code}</span>
+        <p className="text-xs text-slate-500 mt-0.5">{description}</p>
       </div>
-      <div
-        className={`w-4 h-4 rounded-full border flex items-center justify-center transition-all ${
-          isSelected ? 'border-blue-500 bg-blue-500' : 'border-slate-300 bg-white'
-        }`}
-      >
-        {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+      <div className="w-[18px] h-[18px] rounded-full border-2 border-blue-500 flex items-center justify-center shrink-0 bg-white">
+        {isSelected && <div className="w-2 h-2 rounded-full bg-blue-500" />}
       </div>
     </div>
   );
@@ -39,43 +35,41 @@ export default function CouponSection({
   setCouponCodeInput,
 }) {
   return (
-    <div className="border-t border-slate-100 pt-3">
+    <div className="border border-slate-200 rounded-xl p-4 bg-white">
       <div
         onClick={() => setCouponExpanded(!couponExpanded)}
-        className="flex items-center justify-between py-2 cursor-pointer select-none"
+        className="flex items-center justify-between cursor-pointer select-none"
       >
-        <div className="flex items-center gap-2.5 text-slate-700">
-          <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M7 7h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <div className="flex items-center gap-2.5">
+          <svg className="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z" />
           </svg>
-          <span className="font-extrabold text-sm text-slate-800">Apply Coupon</span>
+          <span className="font-bold text-sm text-slate-900">Apply Coupon</span>
         </div>
-        <div className="text-slate-400">
-          <svg
-            className={`w-4 h-4 transform transition-transform duration-200 ${couponExpanded ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
+        <svg
+          className={`w-4 h-4 text-slate-500 transform transition-transform duration-200 ${couponExpanded ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
 
       {couponExpanded && (
-        <div className="mt-3 space-y-3 pt-1">
+        <div className="mt-4 space-y-3">
           <div className="flex gap-2">
             <input
               type="text"
               value={couponCodeInput}
               onChange={(e) => setCouponCodeInput(e.target.value)}
               placeholder="Enter coupon code"
-              className="flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 text-xs focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/5 transition-all"
+              className="flex-1 px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 transition-all"
             />
             <button
               type="button"
-              className="px-4 py-2 border border-blue-200 text-blue-600 bg-white hover:bg-blue-50/30 text-xs font-bold rounded-lg transition-colors cursor-pointer"
+              className="px-4 py-2 border border-slate-200 text-blue-600 bg-white text-sm font-semibold rounded-lg cursor-pointer"
             >
               Apply
             </button>
