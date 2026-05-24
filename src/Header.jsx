@@ -4,7 +4,7 @@ export default function Header() {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <header className="w-full bg-white border-[3px] border-b-slate-200 border-t-transparent border-x-transparent hover:border-[#1A73E8] shadow-sm sticky top-0 z-50 transition-all duration-300 ease-in-out">
+    <header className="w-full bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
         
         {/* Left Side: Search Bar */}
